@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+
+.fa-linkedin {
+  color: white;
+}
+
+.fa-youtube {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+.fa-github {
+  color: white;
+}
+
+.fa-telegram {
+  color: white;
+}
+
+
+
+.bgimg {
+  background-image: url('bg.png');
+  filter: brightness(15%);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  color: white;
+  filter: brightness(120%);
+  font-size: 35px;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  color: white;
+  filter: brightness(120%);
+  font-size: 15px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  filter: brightness(120%);
+  font-size: 35px;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
+
+<div class="bgimg">
+  
+</div>
+<div class="topleft">
+    <p>MLBloggers</p>
+  </div>
+  
+  <div class="topright">
+	  <p align="center">
+	  <a href="https://www.instagram.com/learn.machinelearning/" class="fa fa-instagram"></a>
+		<a href="https://www.linkedin.com/company/learn-machine-learning/" class="fa fa-linkedin"></a>
+		<a href="https://github.com/udaykondreddy/Code-for-learn-machinelearning" class="fa fa-github"></a>
+	  <a href="https://www.youtube.com/c/LearnMachineLearning" class="fa fa-youtube"></a>
+		<a href="https://telegram.me/LearnDotMachineLearning" class="fa fa-telegram"></a>
+	  <a href="https://twitter.com/LearnMachineLe4" class="fa fa-twitter"></a>
+	 
+	  </p>
+	
+  </div>
+<div class="middle">
+    <h1>We're working hard on our new website!
+		We will be ready in:
+		
+		</h1>
+    <hr>
+	<p id="demo" style="font-size:30px"></p>
+  </div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 1, 2020 00:00:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>

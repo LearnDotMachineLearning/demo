@@ -8,8 +8,8 @@ body, html {
   margin: 0;
 }
 .fa {
-  padding: 10px;
-  font-size: 30px;
+  padding: 7px;
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
   margin: 2px 2px;
@@ -50,6 +50,7 @@ body, html {
   background-image: url('bg.png');
   filter: brightness(15%);
   height: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -60,8 +61,9 @@ body, html {
 
 .topleft {
   position: absolute;
-  top: 0;
-  left: 16px;
+  top: 10%;
+  left: 26%;
+  font-weight: bold;
   color: white;
   filter: brightness(120%);
   font-size: 35px;
@@ -69,8 +71,8 @@ body, html {
 
 .topright {
   position: absolute;
-  top: 0;
-  right: 16px;
+  top: 67%;
+  right: 14%;
   color: white;
   filter: brightness(120%);
   font-size: 15px;
@@ -78,19 +80,70 @@ body, html {
 
 .middle {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   filter: brightness(120%);
-  font-size: 35px;
+  font-size: 11px;
 }
+
+#demo{
+  font-size: 27px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width : 400px){
+
+.topleft{
+  top: 17%;
+  left: 27%;
+}
+
+.topright{
+  top: 63%;
+  right: 18%;
+}
+
+}
+
+@media only screen and (min-width : 768px){
+
+  .middle{
+    top: 50%;
+    font-size: 35px;
+  }
+
+  #demo{
+    font-size: 55px;
+  }
+
+  .topleft{
+    top: 0;
+    left: 16px;
+  }
+
+  .topright{
+    top: 0;
+    right: 16px;
+  }
+
+  .fa{
+    font-size: 30px;
+    padding: 10px;
+  }
+    
+  }
+
+  
 
 hr {
   margin: auto;
-  width: 40%;
+  width: 50%;
 }
+
+
 </style>
 <body>
 
@@ -115,11 +168,11 @@ hr {
   </div>
 <div class="middle">
     <h1>We're working hard on our new website!
-		We will be ready in:
+		We will be ready in
 		
 		</h1>
     <hr>
-	<p id="demo" style="font-size:30px"></p>
+	<p id="demo"></p>
   </div>
 
 <script>
